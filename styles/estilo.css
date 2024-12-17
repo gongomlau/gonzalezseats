@@ -1,0 +1,249 @@
+/* Hoja de estilos general de nuestro sitio web */
+
+/* Enlazar hojas de estilo externas que se vayan a usar */
+@import "normalize.css";
+
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+}
+
+h4 {
+    font-size: medium;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+h6 {
+    color: gray;
+}
+
+li {
+    padding: 0.5em;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    margin-block-end: 0.5 em;
+}
+
+hr {
+    border: thin solid lightgray;
+    width:100%;
+}
+
+/* Estilos aplicados a la cabecera y a sus componentes*/
+header {
+    position: relative;
+    background-color: white;
+	display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+	justify-content: space-between;
+    min-height: 100px;
+}
+
+/* Estilu menú principal header*/
+.menu-principal {
+    font-weight: bold;
+    margin: auto;
+    min-width: fit-content;
+}
+
+header nav li a:hover, .pagina-activa {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1; 
+}
+
+/*Estilos aplicados en el bloque principal*/
+.contenedor-portada {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    min-height: 650px;
+}
+
+/* Estilo Imagen portada */   
+.imagen-portada {
+    min-height: inherit;
+}
+
+/* Estilo Slogan portada */
+.slogan {
+    padding-left: 100px;
+    width: 500px;
+    font-size: 60px;
+    font-weight: bolder;
+    align-content: center;
+}
+
+/* Estilo botones de filtrado */
+.contenedor-botonera {
+    display: flex;
+    justify-content:center;
+    padding: 1%;
+}
+
+/* Propiedades boton de filtrado*/
+.itemboton {
+    flex-basis:content;
+    background: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px lightgray;
+    font-size: 1.1em;
+    text-align: center;
+    min-width: 100px;
+    margin-right: 1vw;
+    padding: 1vw; 
+}
+
+a.itemboton:hover{  
+    border-color: black;
+}
+
+/*Propiedades de estilo de presentacion de productos */
+.contenedor-productos {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 1% ;
+    margin: 3%;
+}
+
+/* Diseño de estructura de cada producto*/
+.producto {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    text-align: center;
+    width: 110px;
+    height: 240px;
+    margin: 10px;
+    padding: 15px;
+}
+
+/* Efecto para la estructura de producto*/
+.producto:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px lightgray;
+}
+
+.imagen-producto {
+    height: 150px;
+    border-radius: 10px;
+}
+
+/* Propiedades Footer*/
+footer{
+    height:fit-content;
+	background: rgba(0, 0, 0, 0.1);
+    margin: 0px;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content: space-between;
+    margin: 40px;
+    margin-top: 1vw;
+}
+
+.contenedor-footer nav a:link, nav a:visited, nav a:active{
+    text-decoration: none;
+    color: black;
+}
+
+.contenedor-footer a:hover {
+    color: #414040;
+}
+
+/* Estilos formulario inscripcion*/
+input[type="text"]{
+    height: 30px;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color:  rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    color: gray;
+}
+
+input[type="submit"]{
+    border-radius: 25px;
+    padding: 10px 20px;
+    align-content: center;
+    color: white;
+    border: 0px;
+    margin-left: 5px;
+    background-color: black;
+}
+
+input[type="submit"]:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/*Estilos de listados de enlaces*/
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-inline-start: 10px;
+    font-weight: bold;
+}
+
+nav li{
+    font-size: medium;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+nav li a:link,  nav li a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+/* Estilos conjunto logo y nombre de marca*/
+.logotipo {
+    padding-right: 5px;
+}
+
+.marca {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+
+a.marca:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+/* Efecto ampliación iconos*/
+.enlace-imagen :hover {
+    transform: scale(1.2);
+}
